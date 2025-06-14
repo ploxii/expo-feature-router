@@ -72,7 +72,6 @@ npx expo-feature-router \
   --excludePrefix _ \
   --include _layout.tsx \
   --ignorePatterns *.utils.*,*.view.* \
-  --force-clean
   --watch
 ```
 
@@ -93,8 +92,8 @@ module.exports = {
     include: ['_layout.tsx'],
     ignorePatterns: ['*.utils.*', '*.view.*'],
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
-    watch: true,
-	forceClean: true,
+    watch: true, 
+    forceClean: false,
     dryRun: false,
     verbose: true
 }
@@ -121,7 +120,7 @@ module.exports = {
     ".js"
   ],
   "watch": true,
-  "forceClean": true,
+  "forceClean": false,
   "dryRun": false,
   "verbose": true
 }

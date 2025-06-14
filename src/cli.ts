@@ -30,16 +30,18 @@ program
 	.option("--dry-run", "Enable dry run mode (no file writes)")
 	.option("--config <path>", "Path to JSON or JS config file")
 	.option("--force-clean", "Force clean rebuild (recreate all files)")
+	.name("expo-feature-router")
+	.helpOption("-h, --help", "Display help for command")
 	.action((opts) => {
-		const cliOptions = opts;
-		const fileConfig = loadConfig(cliOptions.config);
+		const cliOptions = opts
+		const fileConfig = loadConfig(cliOptions.config)
 
-		const featuresDir = cliOptions.features || fileConfig.featuresDir || "src/features";
-		const appDir = cliOptions.app || fileConfig.appDir || "src/app";
+		const featuresDir = cliOptions.features || fileConfig.featuresDir || "src/features"
+		const appDir = cliOptions.app || fileConfig.appDir || "src/app"
 
 		if (path.resolve(appDir).startsWith(path.resolve(featuresDir))) {
-			console.error("❌ appDir cannot be inside featuresDir. This would overwrite source files.");
-			process.exit(1);
+			console.error("❌ appDir cannot be inside featuresDir. This would overwrite source files.")
+			process.exit(1)
 		}
 
 		const args = {
@@ -53,12 +55,13 @@ program
 				".js",
 				".jsx",
 			],
-			ignorePatterns: (cliOptions.ignorePatterns ? cliOptions.ignorePatterns.split(",") : fileConfig.ignorePatterns) || [],
+			ignorePatterns:
+				(cliOptions.ignorePatterns ? cliOptions.ignorePatterns.split(",") : fileConfig.ignorePatterns) || [],
 			watch: cliOptions.watch || false,
 			verbose: cliOptions.verbose || false,
 			dryRun: cliOptions.dryRun || false,
 			forceClean: cliOptions.forceClean || fileConfig.forceClean || false,
-		};
+		}
 
 		if (args.watch) {
 			startWatcher({
@@ -68,13 +71,13 @@ program
 				include: args.include,
 				extensions: args.extensions,
 				ignorePatterns: args.ignorePatterns,
-			});
+			})
 		} else {
-			generateRoutes(args);
+			generateRoutes(args)
 			if (args.verbose) {
-				console.log("✅ Routes generated.");
+				console.log("✅ Routes generated.")
 			}
 		}
-	});
+	})
 
 program.parse(process.argv);
