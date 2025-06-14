@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto-generate Expo Router routes from feature-based folders.",
   "repository": {
     "type": "git",
