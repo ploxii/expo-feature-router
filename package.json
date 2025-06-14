@@ -3,8 +3,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auto-generate Expo Router routes from feature-based folders.",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "main": "dist/index.js",
   "bin": {
     "expo-feature-router": "bin/cli.js"

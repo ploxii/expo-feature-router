@@ -2,31 +2,45 @@ import chokidar from 'chokidar';
 import { generateRoutes } from './generateRoutes';
 
 export function startWatcher({
-  featuresDir,
-  appDir,
-  excludePrefix,
-  include,
-  extensions
-}: {
-  featuresDir: string;
-  appDir: string;
-  excludePrefix: string;
-  include: string[];
-  extensions: string[];
+								 featuresDir,
+								 appDir,
+								 excludePrefix,
+								 include,
+								 extensions,
+								 ignorePatterns = [],
+							 }: {
+	featuresDir: string;
+	appDir: string;
+	excludePrefix: string;
+	include: string[];
+	extensions: string[];
+	ignorePatterns?: string[];
 }) {
-  const sync = () =>
-    generateRoutes({ featuresDir, appDir, excludePrefix, include, extensions });
+	// Initial sync - this will be incremental by default
+	const sync = () =>
+		generateRoutes({
+			featuresDir,
+			appDir,
+			excludePrefix,
+			include,
+			extensions,
+			ignorePatterns,
+			forceClean: false // Ensure incremental mode
+		});
 
-  const watcher = chokidar.watch(featuresDir, {
-    ignored: /(^|[/\\])\../,
-    ignoreInitial: false,
-    persistent: true,
-  });
+	const watcher = chokidar.watch(featuresDir, {
+		ignored: /(^|[/\\])\../,
+		ignoreInitial: true, // Changed to true to avoid initial flood
+		persistent: true,
+	});
 
-  watcher.on('all', (event, path) => {
-    console.log(`🔄 [${event}] Changed: ${path}`);
-    sync();
-  });
+	// Do initial sync before starting to watch
+	console.log(`🔄 Initial sync...`);
+	sync();
+	console.log(`👀 Watching ${featuresDir} for changes...`);
 
-  console.log(`👀 Watching ${featuresDir} for changes...`);
+	watcher.on('all', (event, path) => {
+		console.log(`🔄 [${event}] Changed: ${path}`);
+		sync();
+	});
 }

@@ -127,8 +127,31 @@ module.exports = {
 Then simply run:
 
 ```bash
-npx expo-feature-router
+npx expo-feature-router --config expo-feature-router.config.js
 ```
+
+You can also use `--config` to specify a different config file name or path.
+
+## Usage in `package.json` scripts:
+- A recommnended approach is to modify your `dev` script in `package.json` to include the route generation command using `concurrently`. 
+- Be sure to have `concurrently` installed as a dev dependency:
+
+```bash
+npm install --save-dev concurrently
+```
+
+Then, update your `package.json` scripts section like this:
+
+```json
+{
+  "scripts": {
+    "start": "expo start",
+    "dev": "concurrently --raw --kill-others \"npm start\"  \"expo-feature-router --config expo-feature-router.config.json --watch\""
+  }
+}
+
+```
+
 
 <!--- ---
 

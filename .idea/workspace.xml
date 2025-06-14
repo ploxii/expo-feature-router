@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5238d11f-1868-4ea0-b46b-1dea3b6949b8" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cli.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/cli.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generateRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/generateRoutes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/watcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/watcher.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,20 +18,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jesulonimii"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jesulonimii&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ploxii/expo-feature-router.git",
-    "accountId": "0c96d9eb-bc6f-4327-a082-5ead97b7a6ca"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ploxii/expo-feature-router.git&quot;,
+    &quot;accountId&quot;: &quot;0c96d9eb-bc6f-4327-a082-5ead97b7a6ca&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -40,7 +49,8 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "try",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/jesulonimii/Documents/Work/open-source/expo-feature-router",
     "node.js.detected.package.tslint": "true",
@@ -93,7 +103,8 @@
       <workItem from="1749850479167" duration="19000" />
       <workItem from="1749850510208" duration="6000" />
       <workItem from="1749850538691" duration="43000" />
-      <workItem from="1749850587758" duration="3409000" />
+      <workItem from="1749850587758" duration="4855000" />
+      <workItem from="1749906230097" duration="2380000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -103,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749852831924</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1749886761176</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749886761176</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
