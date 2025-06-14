@@ -7,7 +7,7 @@
   "description": "Auto-generate Expo Router routes from feature-based folders.",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ploxii/expo-feature-router"
   },
   "main": "dist/index.js",
   "bin": {
